@@ -12,12 +12,13 @@ Pod::Spec.new do |s|
   s.version          = "0.1.0"
   s.summary          = "StringInChain give you a far more clean way to create attributed string."
   s.description      = <<-DESC
-                       StringInChain give you a far more clean way to create attributed string.
+                        An convenient and fast approach to create AttributedString.
+                        StringInChain give you a far more clean way to create attributed string.
                        DESC
-  s.homepage         = "https://github.com/lsolniczek/StringInChain"
+  s.homepage         = "https://github.com/lsolniczek/string-in-chain"
   s.license          = 'MIT'
   s.author           = { "Lukasz Solniczek" => "l.solniczek@gmail.com" }
-  s.source           = { :git => "https://github.com/lsolniczek/StringInChain.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/lsolniczek/string-in-chain.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
