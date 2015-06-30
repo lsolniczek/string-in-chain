@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'StringInChain_Example', :exclusive => true do
+  pod "StringInChain", :path => "../"
+end
+
+target 'StringInChain_Tests', :exclusive => true do
+  pod "StringInChain", :path => "../"
+
+  pod 'Quick', '~> 0.3.1'
+  pod 'Nimble'
+  pod 'FBSnapshotTestCase'
+  pod 'Nimble-Snapshots'
+end
