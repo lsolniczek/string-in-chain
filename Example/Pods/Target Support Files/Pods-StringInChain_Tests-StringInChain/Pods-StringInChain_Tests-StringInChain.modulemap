@@ -1,0 +1,6 @@
+framework module StringInChain {
+  umbrella header "Pods-StringInChain_Tests-StringInChain-umbrella.h"
+
+  export *
+  module * { export * }
+}
