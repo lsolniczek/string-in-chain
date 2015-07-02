@@ -33,9 +33,8 @@ public class StringInChain {
     func setRange() -> NSRange {
         if let stringToMach = stringToMach as String? {
             return baseText.rangeOfString(stringToMach)
-        } else {
-            return baseText.rangeOfString(baseText as String)
         }
+        return baseText.rangeOfString(baseText as String)
     }
     
 }
