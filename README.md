@@ -32,9 +32,9 @@ label.attributedText = attrText
 ```
 let baseString = "String In Chain"
 var attrText = baseString.chain { (string) -> Void in
-string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
-string.match("In").underline(1, andColor: UIColor.yellowColor())
-string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
+    string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
+    string.match("In").underline(1, andColor: UIColor.yellowColor())
+    string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
 }
 label.attributedText = attrText.attrString
 ```
