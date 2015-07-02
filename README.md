@@ -46,6 +46,8 @@ label.attributedText = "String In Chain".match("String").withColor(UIColor.blueC
 ```
 
 Clean and Easy, don't You think?
+
+
 ----
 
 ## Usage
