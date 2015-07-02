@@ -38,8 +38,14 @@ string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
 }
 label.attributedText = attrText.attrString
 ```
-Clean and Easy, don't You think?
 
+If you want, there is also fast, inline way to make `AttributedString`
+
+```
+label.attributedText = "String In Chain".match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!).attrString
+```
+
+Clean and Easy, don't You think?
 ----
 
 ## Usage
