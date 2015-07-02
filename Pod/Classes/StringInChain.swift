@@ -10,7 +10,7 @@ import Foundation
 
 public class StringInChain {
     
-    var stringToMach: String?
+    var stringToMatch: String?
     var baseText: NSString
     public var attrString: NSMutableAttributedString
     
@@ -19,20 +19,20 @@ public class StringInChain {
         self.attrString = NSMutableAttributedString(string: string)
     }
     
-    init(string: String, stringToMach: String) {
+    init(string: String, stringToMatch: String) {
         self.baseText = string
-        self.stringToMach = stringToMach
+        self.stringToMatch = stringToMatch
         self.attrString = NSMutableAttributedString(string: string)
     }
     
     public func match(text: String) -> StringInChain {
-        stringToMach = text
+        stringToMatch = text
         return self
     }
     
     func setRange() -> NSRange {
-        if let stringToMach = stringToMach as String? {
-            return baseText.rangeOfString(stringToMach)
+        if let stringToMatch = stringToMatch as String? {
+            return baseText.rangeOfString(stringToMatch)
         }
         return baseText.rangeOfString(baseText as String)
     }

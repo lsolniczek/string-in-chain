@@ -17,7 +17,7 @@ extension String {
     }
     
     public func match(string: String) -> StringInChain {
-        return StringInChain(string: self, stringToMach: string)
+        return StringInChain(string: self, stringToMatch: string)
     }
     
 }
