@@ -32,17 +32,32 @@ label.attributedText = attrText
 ```
 let baseString = "String In Chain"
 var attrText = baseString.chain { (string) -> Void in
-string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
-string.match("In").underline(1, andColor: UIColor.yellowColor())
-string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
+    string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
+    string.match("In").underline(1, andColor: UIColor.yellowColor())
+    string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
 }
 label.attributedText = attrText.attrString
 ```
+
+Instead of `match(text: String)` (this way you can find only first occurance of string), you can use:
+```
+match(from: Int, to:Int)
+```
+Example:
+```
+string.match(from: 7, to: 10).withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
+```
+This way you can create `AttributedString` by match range `from` and `to`
+
+If you want, there is also fast, inline way to make `AttributedString`
+
+```
+label.attributedText = "String In Chain".match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!).attrString
+```
+
 Clean and Easy, don't You think?
 
-
-
-----
+=======
 
 ## Usage
 
