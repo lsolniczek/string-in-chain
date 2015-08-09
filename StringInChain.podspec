@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "StringInChain"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "StringInChain give you a far more clean way to create attributed string."
   s.description      = <<-DESC
                         An convenient and fast approach to create AttributedString.

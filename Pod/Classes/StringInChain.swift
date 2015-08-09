@@ -30,6 +30,12 @@ public class StringInChain {
         return self
     }
     
+    public func match(#from: Int, to: Int) -> StringInChain {
+        let range = NSMakeRange(from, (to-from)+1)
+        stringToMatch = baseText.substringWithRange(range)
+        return self
+    }
+    
     func setRange() -> NSRange {
         if let stringToMatch = stringToMatch as String? {
             return baseText.rangeOfString(stringToMatch)

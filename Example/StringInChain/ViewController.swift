@@ -18,9 +18,10 @@ class ViewController: UIViewController {
         let baseString = "String In Chain"
         
         var attrText = baseString.chain { (string) -> Void in
-            string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
-            string.match("In").underline(1, andColor: UIColor.yellowColor())
-            string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
+//            string.match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
+//            string.match("In").underline(1, andColor: UIColor.yellowColor())
+//            string.match("Chain").withStroke(1, andColor: UIColor.blackColor())
+            string.match(from: 7, to: 7).withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
         }
         
         //        let baseString: NSString = "String In Chain"

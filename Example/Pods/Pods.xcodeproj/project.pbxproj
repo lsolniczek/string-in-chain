@@ -94,8 +94,6 @@
 		D18E97298939A74B91F1F8B9 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBDFF2187AC2CFC1DC974F9 /* Expression.swift */; };
 		D399D5D04CF160944E27056F /* RaisesException.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF03380F1FB1EE110F0BB342 /* RaisesException.swift */; };
 		D48472588E937E874764AD53 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7792E54723660565B979B9 /* Quick.framework */; };
-		D632A2501B43240B00957317 /* StringInChain.h in Headers */ = {isa = PBXBuildFile; fileRef = D632A24C1B43240B00957317 /* StringInChain.h */; };
-		D632A2511B43240B00957317 /* StringInChain.h in Headers */ = {isa = PBXBuildFile; fileRef = D632A24C1B43240B00957317 /* StringInChain.h */; };
 		D632A2521B43240B00957317 /* String+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632A24D1B43240B00957317 /* String+Chain.swift */; };
 		D632A2531B43240B00957317 /* String+Chain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632A24D1B43240B00957317 /* String+Chain.swift */; };
 		D632A2541B43240B00957317 /* StringInChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = D632A24E1B43240B00957317 /* StringInChain.swift */; };
@@ -335,7 +333,6 @@
 		D2FF2701324CCB963501D2C6 /* Poll.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poll.swift; path = Nimble/Utils/Poll.swift; sourceTree = "<group>"; };
 		D385CDD4E2D20BE54BA9ED25 /* Pods-StringInChain_Tests-Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StringInChain_Tests-Quick-prefix.pch"; sourceTree = "<group>"; };
 		D4B38259E87592208739D154 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		D632A24C1B43240B00957317 /* StringInChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringInChain.h; sourceTree = "<group>"; };
 		D632A24D1B43240B00957317 /* String+Chain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Chain.swift"; sourceTree = "<group>"; };
 		D632A24E1B43240B00957317 /* StringInChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringInChain.swift; sourceTree = "<group>"; };
 		D632A24F1B43240B00957317 /* StringInChain+Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StringInChain+Attributes.swift"; sourceTree = "<group>"; };
@@ -616,7 +613,6 @@
 		9F0F7D084789A50DB008AC76 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D632A24C1B43240B00957317 /* StringInChain.h */,
 				D632A24D1B43240B00957317 /* String+Chain.swift */,
 				D632A24E1B43240B00957317 /* StringInChain.swift */,
 				D632A24F1B43240B00957317 /* StringInChain+Attributes.swift */,
@@ -828,7 +824,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D632A2501B43240B00957317 /* StringInChain.h in Headers */,
 				151BD1EB22A90C2CB10CA6BF /* Pods-StringInChain_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,7 +853,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D632A2511B43240B00957317 /* StringInChain.h in Headers */,
 				A8AD9AE52AA079625EA27497 /* Pods-StringInChain_Example-StringInChain-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
