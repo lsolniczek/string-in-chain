@@ -11,7 +11,7 @@ import Foundation
 extension String {
     
     public func chain(chainString: (string: StringInChain) -> Void) -> StringInChain {
-        var chainedString = StringInChain(string: self)
+        let chainedString = StringInChain(string: self)
         chainString (string: chainedString)
         return chainedString
     }

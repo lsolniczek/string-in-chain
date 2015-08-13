@@ -30,8 +30,8 @@ public class StringInChain {
         return self
     }
     
-    public func match(#from: Int, to: Int) -> StringInChain {
-        let range = NSMakeRange(from, (to-from)+1)
+    public func match(from begin: Int, to: Int) -> StringInChain {
+        let range = NSMakeRange(begin, (to-begin)+1)
         stringToMatch = baseText.substringWithRange(range)
         return self
     }
