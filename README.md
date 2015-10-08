@@ -76,7 +76,7 @@ pod "StringInChain"
 
 ## Author
 
-Lukasz Solniczek, l.solniczek@gmail.com
+Lukasz Solniczek, l.solniczek(at)gmail(dot)com
 
 ## License
 
