@@ -14,12 +14,6 @@ public class StringInChain {
     var baseText: NSString
     public var attrString: NSMutableAttributedString
 
-// DFH: by using a predefined optional for stringToMatch below, we can get rid of this initializer
-//    init(string: String) {
-//        self.baseText = string
-//        self.attrString = NSMutableAttributedString(string: string)
-//    }
-
     init(string: String, stringToMatch: String? = nil) {
         self.baseText = string
 		self.stringToMatch = stringToMatch
@@ -38,10 +32,11 @@ public class StringInChain {
     }
     
     func setRange() -> NSRange {
-        if let stringToMatch = stringToMatch {		// DFH: was "stringToMatch as String?"
+        if let stringToMatch = stringToMatch {
             return baseText.rangeOfString(stringToMatch)
-        }
-        return baseText.rangeOfString(baseText as String)
+        } else {
+			return baseText.rangeOfString(baseText as String)
+		}
     }
     
 }
