@@ -15,9 +15,16 @@ extension String {
         chainString (string: chainedString)
         return chainedString
     }
-    
-    public func match(string: String) -> StringInChain {
+
+	// match can be used as match() to match the whole string, or supply an argument to operate on the first match
+    public func match(string: String? = nil) -> StringInChain {
         return StringInChain(string: self, stringToMatch: string)
     }
     
+}
+
+// This allows us to easily append strings to another - s0 + s1 + s2 -? appends s1 to s0, then appends s2 to s0
+public func + (left: NSMutableAttributedString, right: NSMutableAttributedString) -> NSMutableAttributedString {
+	left.appendAttributedString(right)
+	return left
 }

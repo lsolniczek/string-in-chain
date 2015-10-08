@@ -7,13 +7,13 @@
 
 ----
 
-An convenient and fast approach to create `AttributedString`.
+A fast and convenient  approach to creating an `AttributedString`.
 
-StringInChain give you a far more clean way to create attributed string.
+StringInChain gives you a far  superior method to create an attributed string than what the mutable class provides out of the box. [Additions by D Hoerl documented near the bottom]
 
-# The Old Way
+# The Standard Way
 
-With the old way, create am attributed string is dirty and complex.
+Creating an attributed string is complex and wordy:
 
 ```
 let baseString: NSString = "String In Chain"
@@ -27,7 +27,7 @@ attrText.addAttribute(NSStrokeColorAttributeName, value: UIColor.blackColor(), r
 label.attributedText = attrText
 ```
 
-# With StringInChain
+# Using StringInChain
 
 ```
 let baseString = "String In Chain"
@@ -39,25 +39,35 @@ var attrText = baseString.chain { (string) -> Void in
 label.attributedText = attrText.attrString
 ```
 
-Instead of `match(text: String)` (this way you can find only first occurance of string), you can use:
+In addition to `match(text: String)` (which only finds the first occurrence of `string`), you can use:
 ```
 match(from: Int, to:Int)
 ```
-Example:
+For example:
 ```
 string.match(from: 7, to: 10).withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!)
 ```
 This way you can create `AttributedString` by match range `from` and `to`
 
-If you want, there is also fast, inline way to make `AttributedString`
+If you want, there is also a terse inline way to make an `AttributedString`
 
 ```
 label.attributedText = "String In Chain".match("String").withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!).attrString
 ```
 
-Clean and Easy, don't You think?
+Clean and Easy, don't you think?
 
 =======
+
+D. Hoerl changed the `match` parameter to be an optional defaulting to nil, so you can use:
+
+```
+label.attributedText = "String In Chain".match().withColor(UIColor.blueColor()).withFont(UIFont(name: "Avenir", size: 30.0)!).attrString
+```
+
+and have the compete string set to the specified color and font. Since it's fairly easy to append.
+
+Also added support for `+` to NSAttributedString, so you can easily chain attributed strings together.
 
 ## Usage
 
@@ -76,7 +86,7 @@ pod "StringInChain"
 
 ## Author
 
-Lukasz Solniczek, l.solniczek@gmail.com
+Lukasz Solniczek, l dot solniczek at gmail dot com
 
 ## License
 
