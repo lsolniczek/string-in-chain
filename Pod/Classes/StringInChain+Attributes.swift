@@ -34,24 +34,30 @@ extension StringInChain {
         return self
     }
     
-    public func strikeThrough(style: Int, andColor color: UIColor) -> StringInChain {
+    public func strikeThrough(style: Bool, andColor color: UIColor? = nil) -> StringInChain {
         let stringRange = setRange()
-        attrString.addAttribute(NSStrikethroughStyleAttributeName, value: style, range: stringRange)
-        attrString.addAttribute(NSStrikethroughColorAttributeName, value: color, range: stringRange)
+        attrString.addAttribute(NSStrikethroughStyleAttributeName, value: style ? 1 : 0, range: stringRange)
+		if let color = color {
+			attrString.addAttribute(NSStrikethroughColorAttributeName, value: color, range: stringRange)
+		}
         return self
     }
     
-    public func underline(style: Int, andColor color: UIColor) -> StringInChain {
+    public func underline(style: NSUnderlineStyle, andColor color: UIColor? = nil) -> StringInChain {
         let stringRange = setRange()
-        attrString.addAttribute(NSUnderlineStyleAttributeName, value: style, range: stringRange)
-        attrString.addAttribute(NSUnderlineColorAttributeName, value: color, range: stringRange)
+        attrString.addAttribute(NSUnderlineStyleAttributeName, value: style.rawValue, range: stringRange)
+		if let color = color {
+			attrString.addAttribute(NSUnderlineColorAttributeName, value: color, range: stringRange)
+		}
         return self
     }
     
-    public func withStroke(width: Int, andColor color: UIColor) -> StringInChain {
+    public func withStroke(width: Double, andColor color: UIColor? = nil) -> StringInChain {
         let stringRange = setRange()
         attrString.addAttribute(NSStrokeWidthAttributeName, value: width, range: stringRange)
-        attrString.addAttribute(NSStrokeColorAttributeName, value: color, range: stringRange)
+		if let color = color {
+			attrString.addAttribute(NSStrokeColorAttributeName, value: color, range: stringRange)
+		}
         return self
     }
     
