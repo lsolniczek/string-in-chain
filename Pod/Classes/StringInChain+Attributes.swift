@@ -55,4 +55,9 @@ extension StringInChain {
         return self
     }
     
+    public func withKerning(kerning: Double) -> StringInChain {
+        let stringRange = setRange()
+        attrString.addAttribute(NSKernAttributeName, value: kerning, range: stringRange)
+        return self
+    }    
 }
