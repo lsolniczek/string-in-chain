@@ -20,7 +20,7 @@ extension String {
     public func match(string: String? = nil) -> StringInChain {
         return StringInChain(string: self, stringToMatch: string)
     }
-    
+
 }
 
 // This allows us to easily append strings to another - s0 + s1 + s2 -? appends s1 to s0, then appends s2 to s0

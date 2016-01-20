@@ -26,7 +26,7 @@ public class StringInChain {
     }
     
     public func match(from begin: Int, to: Int) -> StringInChain {
-        let range = NSMakeRange(begin, (to-begin)+1)
+        let range = NSMakeRange(begin, to-begin)
         stringToMatch = baseText.substringWithRange(range)
         return self
     }

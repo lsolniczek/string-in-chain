@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Lukasz Solniczek. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension StringInChain {
     
