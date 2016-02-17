@@ -24,7 +24,12 @@ extension String {
 }
 
 // This allows us to easily append strings to another - s0 + s1 + s2 -? appends s1 to s0, then appends s2 to s0
-public func + (left: NSMutableAttributedString, right: NSMutableAttributedString) -> NSMutableAttributedString {
+public func + (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+	left.appendAttributedString(right)
+	return left
+}
+
+public func += (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
 	left.appendAttributedString(right)
 	return left
 }

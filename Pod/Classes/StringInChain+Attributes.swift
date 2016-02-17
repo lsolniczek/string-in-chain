@@ -51,13 +51,29 @@ extension StringInChain {
 		}
         return self
     }
-    
+
+    public func underline(styles: [NSUnderlineStyle], andColor color: UIColor? = nil) -> StringInChain {
+		let rawValue: Int = styles.reduce(0, combine: { return $0 | $1.rawValue } )
+        let stringRange = setRange()
+        attrString.addAttribute(NSUnderlineStyleAttributeName, value: rawValue, range: stringRange)
+		if let color = color {
+			attrString.addAttribute(NSUnderlineColorAttributeName, value: color, range: stringRange)
+		}
+        return self
+    }
+
     public func withStroke(width: Double, andColor color: UIColor? = nil) -> StringInChain {
         let stringRange = setRange()
         attrString.addAttribute(NSStrokeWidthAttributeName, value: width, range: stringRange)
 		if let color = color {
 			attrString.addAttribute(NSStrokeColorAttributeName, value: color, range: stringRange)
 		}
+        return self
+    }
+    
+    public func withParagraphStyle(style: NSParagraphStyle) -> StringInChain {
+        let stringRange = setRange()
+        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: stringRange)
         return self
     }
     
