@@ -17,8 +17,8 @@ extension String {
     }
 
 	// match can be used as match() to match the whole string, or supply an argument to operate on the first match
-    public func match(string: String? = nil) -> StringInChain {
-        return StringInChain(string: self, stringToMatch: string)
+    public func match(string stringToMatch: String? = nil) -> StringInChain {
+        return StringInChain(string: self, stringToMatch: stringToMatch)
     }
 
 }
