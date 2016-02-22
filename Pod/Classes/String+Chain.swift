@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-    public func chain(chainString: (string: StringInChain) -> Void) -> StringInChain {
+    public func chain(@noescape chainString: (string: StringInChain) -> Void) -> StringInChain {
         let chainedString = StringInChain(string: self)
         chainString (string: chainedString)
         return chainedString
