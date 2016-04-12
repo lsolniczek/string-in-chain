@@ -59,5 +59,13 @@ extension StringInChain {
         let stringRange = setRange()
         attrString.addAttribute(NSKernAttributeName, value: kerning, range: stringRange)
         return self
-    }    
+    }
+    
+    public func withLineSpacing(lineSpacing:CGFloat) -> StringInChain {
+        let stringRange = setRange()
+        let style = NSMutableParagraphStyle()
+        style.setLineSpacing(lineSpacing)
+        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: stringRange)
+        return self
+    }
 }
