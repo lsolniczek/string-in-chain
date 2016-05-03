@@ -61,11 +61,9 @@ extension StringInChain {
         return self
     }
     
-    public func withLineSpacing(lineSpacing:CGFloat) -> StringInChain {
+    public func withParagraphStyle(paragraphStyle:NSMutableParagraphStyle) -> StringInChain {
         let stringRange = setRange()
-        let style = NSMutableParagraphStyle()
-        style.lineSpacing = lineSpacing
-        attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: stringRange)
+        attrString.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: stringRange)
         return self
     }
 }
