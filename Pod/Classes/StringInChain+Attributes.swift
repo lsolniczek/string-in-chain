@@ -76,5 +76,17 @@ extension StringInChain {
         attrString.addAttribute(NSParagraphStyleAttributeName, value: style, range: stringRange)
         return self
     }
-    
+
+    public func withKerning(kerning: Double) -> StringInChain {
+        let stringRange = setRange()
+        attrString.addAttribute(NSKernAttributeName, value: kerning, range: stringRange)
+        return self
+    }    
+
+    public func withLink(url: NSURL) -> StringInChain {
+        let stringRange = setRange()
+        attrString.addAttribute(NSLinkAttributeName, value: url, range: stringRange)
+        return self
+    }    
+
 }
