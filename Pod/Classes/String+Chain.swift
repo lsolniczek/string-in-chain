@@ -9,6 +9,9 @@
 import Foundation
 
 
+
+#if swift(>=3.0)
+
 extension String {
 
     public func chain(_ chainString: (_ string: StringInChain) -> Void) -> StringInChain {
@@ -24,8 +27,6 @@ extension String {
 
 }
 
-#if swift(>=3.0)
-
 // This allows us to easily append strings to another - s0 + s1 + s2 -? appends s1 to s0, then appends s2 to s0
 public func + (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
 	left.append(right)
@@ -38,6 +39,21 @@ public func += (left: NSMutableAttributedString, right: NSAttributedString) -> N
 }
 
 #else
+
+extension String {
+    
+    public func chain(@noescape chainString: (string: StringInChain) -> Void) -> StringInChain {
+        let chainedString = StringInChain(string: self)
+        chainString (string: chainedString)
+        return chainedString
+    }
+
+	// match can be used as match() to match the whole string, or supply an argument to operate on the first match
+    public func match(string stringToMatch: String? = nil) -> StringInChain {
+        return StringInChain(string: self, stringToMatch: stringToMatch)
+    }
+
+}
 
 // This allows us to easily append strings to another - s0 + s1 + s2 -? appends s1 to s0, then appends s2 to s0
 public func + (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
