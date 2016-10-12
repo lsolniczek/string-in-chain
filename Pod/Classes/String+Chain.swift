@@ -33,9 +33,9 @@ public func + (left: NSMutableAttributedString, right: NSAttributedString) -> NS
 	return left
 }
 
-public func += (left: NSMutableAttributedString, right: NSAttributedString) -> NSMutableAttributedString {
+public func += (left: NSMutableAttributedString, right: NSAttributedString) {
 	left.append(right)
-	return left
+	return
 }
 
 #else
