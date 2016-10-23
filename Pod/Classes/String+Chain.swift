@@ -10,13 +10,13 @@ import Foundation
 
 extension String {
     
-    public func chain(chainString: (string: StringInChain) -> Void) -> StringInChain {
+    public func chain(_ chainString: (_ string: StringInChain) -> Void) -> StringInChain {
         let chainedString = StringInChain(string: self)
-        chainString (string: chainedString)
+        chainString (chainedString)
         return chainedString
     }
     
-    public func match(string: String) -> StringInChain {
+    public func match(_ string: String) -> StringInChain {
         return StringInChain(string: self, stringToMatch: string)
     }
     

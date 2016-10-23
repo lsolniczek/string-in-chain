@@ -1,18 +1,7 @@
 PODS:
-  - FBSnapshotTestCase (1.8.1)
-  - Nimble (0.4.2)
-  - Nimble-Snapshots (0.4.0):
-    - FBSnapshotTestCase (~> 1.7)
-    - Nimble (~> 0.4)
-    - Quick (~> 0.3)
-  - Quick (0.3.1)
-  - StringInChain (0.1.0)
+  - StringInChain (0.3.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
-  - Nimble
-  - Nimble-Snapshots
-  - Quick (~> 0.3.1)
   - StringInChain (from `../`)
 
 EXTERNAL SOURCES:
@@ -20,10 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
-  Nimble: 49b7a7da8919f42823d37c6d68cc6d15a7009f32
-  Nimble-Snapshots: 216ae8c0ea3f4105be1606749fe15d8b2138af40
-  Quick: 824572d3d198d51e52cf4aa722cebf7e59952a35
-  StringInChain: 4f32631c087f4444f021b7b405dceb1b914733f7
+  StringInChain: 31f5b2a587a417563e4b00b585eacbc4927f1e2a
 
-COCOAPODS: 0.37.2
+PODFILE CHECKSUM: 6b1f8d63ce10db55d019ccc00c4b23d4c8dbb877
+
+COCOAPODS: 1.0.1

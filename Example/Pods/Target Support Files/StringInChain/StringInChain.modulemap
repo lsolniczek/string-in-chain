@@ -1,0 +1,6 @@
+framework module StringInChain {
+  umbrella header "StringInChain-umbrella.h"
+
+  export *
+  module * { export * }
+}
