@@ -85,12 +85,7 @@ pod "StringInChain"
 ```
 
 ## Author
-
-<<<<<<< HEAD
-Lukasz Solniczek, l.solniczek(at)gmail(dot)com
-=======
 Lukasz Solniczek, l dot solniczek at gmail dot com
->>>>>>> 35f3cb7191939e164e98b259adb64dcaca334a57
 
 ## License
 
